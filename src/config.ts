@@ -69,7 +69,6 @@ export default {
       '--disable-gpu',
       '--disable-features=site-per-process',
       '--allow-running-insecure-content',
-      '--disable-web-security',
       '--disable-client-side-phishing-detection',
       '--disable-features=IsolateOrigins,site-per-process,SitePerProcess',
       '--disable-features=LeakyPeeker',
