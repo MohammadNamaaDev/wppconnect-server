@@ -47,7 +47,7 @@ export default {
     browserArgs: [
       '--disable-web-security',
       '--no-sandbox',
-      '--disable-web-security',
+      '--disable-setuid-sandbox',
       '--aggressive-cache-discard',
       '--disable-cache',
       '--disable-application-cache',
@@ -66,6 +66,13 @@ export default {
       '--ignore-certificate-errors',
       '--ignore-ssl-errors',
       '--ignore-certificate-errors-spki-list',
+      '--disable-gpu',
+      '--disable-features=site-per-process',
+      '--allow-running-insecure-content',
+      '--disable-web-security',
+      '--disable-client-side-phishing-detection',
+      '--disable-features=IsolateOrigins,site-per-process,SitePerProcess',
+      '--disable-features=LeakyPeeker',
     ],
     /**
      * Example of configuring the linkPreview generator
@@ -76,6 +83,10 @@ export default {
      * linkPreviewApiServers: [ 'https://www.yourserver.com/wa-js-api-server' ]
      */
     linkPreviewApiServers: null,
+    puppeteerOptions: {
+      headless: 'new',
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    },
   },
   mapper: {
     enable: false,
