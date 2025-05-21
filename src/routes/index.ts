@@ -948,4 +948,10 @@ routes.get('/unhealthy', HealthCheck.unhealthy);
 
 routes.get('/metrics', prometheusRegister.metrics);
 
+// Clear all sessions and tokens
+routes.post(
+  '/api/:secretkey/clear-all-sessions',
+  SessionController.clearAllSessionsAndTokens
+);
+
 export default routes;
